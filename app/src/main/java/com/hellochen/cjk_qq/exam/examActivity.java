@@ -1,4 +1,4 @@
-package com.hellochen.cjk_qq;
+package com.hellochen.cjk_qq.exam;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +11,8 @@ import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+
+import com.hellochen.cjk_qq.R;
 
 
 public class examActivity extends AppCompatActivity implements View.OnClickListener{

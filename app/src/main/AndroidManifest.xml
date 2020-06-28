@@ -15,18 +15,18 @@
         android:theme="@style/Theme.CJK_QQ">
         <activity android:name=".user.QueryUser"
             android:label="用户查询"/>
-        <activity
-            android:name=".ui.login.TestActivity"
-            android:label="@string/title_activity_test" />
-        <activity android:name=".forgetPassword" />
-        <activity android:name=".Register" />
+
+        <activity android:name=".Login.ForgetPassword" />
+        <activity android:name=".Login.Register" />
         <activity
             android:name=".MainActivity"
             android:label="Home" />
         <activity android:name=".MyActivity" />
-        <activity android:name=".Login"/>
-        <activity android:name=".wechat.SmartRoot"/>
-        <activity android:name=".examActivity"/>
+        <activity android:name=".Login.Login"/>
+        <activity android:name=".wechat.SmartRoot"
+            android:label="聊天机器人" />
+        <activity android:name=".exam.examActivity"
+            android:label="考试" />
 
         <activity android:name=".Splash">
             <intent-filter>
