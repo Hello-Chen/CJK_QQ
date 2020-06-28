@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.hellochen.cjk_qq">
-
+    <!-- 拨打电话权限 -->
     <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
@@ -11,14 +11,18 @@
         android:roundIcon="@mipmap/ic_qq"
         android:supportsRtl="true"
         android:theme="@style/Theme.CJK_QQ">
-        <activity android:name=".MyActivity"></activity>
+        <activity android:name=".QueryUser"></activity>
         <activity
             android:name=".ui.login.TestActivity"
             android:label="@string/title_activity_test" />
         <activity android:name=".forgetPassword" />
         <activity android:name=".register" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".Login">
+        <activity
+            android:name=".MainActivity"
+            android:label="查询用户" />
+        <activity android:name=".MyActivity" />
+        <activity android:name=".Login" />
+        <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

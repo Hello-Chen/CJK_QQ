@@ -9,7 +9,14 @@
         android:id="@+id/jd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
         android:text="进度"/>
 
+    <Button
+        android:id="@+id/tc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/jd"
+        android:layout_centerHorizontal="true"
+        android:text="弹窗" />
 </RelativeLayout>

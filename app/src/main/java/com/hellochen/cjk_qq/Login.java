@@ -7,6 +7,7 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -26,27 +27,6 @@ public class Login extends AppCompatActivity {
         getTV_3 = findViewById(R.id.designer);
         getIB_1 = findViewById(R.id.login);
 
-       /* getIB_1.setOnClickListener(V->{
-            ProgressDialog progressDialog = new ProgressDialog(Login.this);
-            progressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-            progressDialog.setTitle("dds");
-            progressDialog.setMessage("正在下载...");
-            new Thread(){
-                @Override
-                public void run() {
-                    for (int i=0;i<=100;i++){
-                        progressDialog.setProgress(i);
-                        try {
-                            sleep(30);
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                    progressDialog.dismiss();
-                }
-            }.start();
-            progressDialog.show();
-        });*/
         //监听事件函数
         setListeners();
     }
@@ -95,11 +75,8 @@ public class Login extends AppCompatActivity {
                             progressDialog.dismiss();
                         }
                     }.start();
-                    intent = new Intent(Login.this, MainActivity.class);
-
                     progressDialog.show();
-
-                    break;
+                    intent = new Intent(Login.this, MainActivity.class);
             }
             startActivity(intent);
         }
