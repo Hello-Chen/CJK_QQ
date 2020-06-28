@@ -1,8 +1,10 @@
-package com.hellochen.cjk_qq;
+package com.hellochen.cjk_qq.user;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.hellochen.cjk_qq.R;
 
 public class QueryUser extends AppCompatActivity {
 

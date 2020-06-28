@@ -3,6 +3,8 @@
     package="com.hellochen.cjk_qq">
     <!-- 拨打电话权限 -->
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- 震动权限 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
         android:allowBackup="true"
@@ -11,17 +13,21 @@
         android:roundIcon="@mipmap/ic_qq"
         android:supportsRtl="true"
         android:theme="@style/Theme.CJK_QQ">
-        <activity android:name=".QueryUser"></activity>
+        <activity android:name=".user.QueryUser"
+            android:label="用户查询"/>
         <activity
             android:name=".ui.login.TestActivity"
             android:label="@string/title_activity_test" />
         <activity android:name=".forgetPassword" />
-        <activity android:name=".register" />
+        <activity android:name=".Register" />
         <activity
             android:name=".MainActivity"
-            android:label="查询用户" />
+            android:label="Home" />
         <activity android:name=".MyActivity" />
-        <activity android:name=".Login" />
+        <activity android:name=".Login"/>
+        <activity android:name=".wechat.SmartRoot"/>
+        <activity android:name=".examActivity"/>
+
         <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
