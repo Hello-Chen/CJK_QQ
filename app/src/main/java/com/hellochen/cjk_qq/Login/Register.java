@@ -8,15 +8,12 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.hellochen.cjk_qq.R;
-import com.hellochen.cjk_qq.bean.User;
+import com.hellochen.cjk_qq.user.User;
 import com.hellochen.cjk_qq.mode.AccountDao;
 import com.hellochen.cjk_qq.mode.UserDBHelper;
-
-import org.w3c.dom.Text;
 
 public class Register extends AppCompatActivity implements View.OnClickListener {
     private UserDBHelper userDBHelper;

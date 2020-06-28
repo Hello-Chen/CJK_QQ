@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-import com.hellochen.cjk_qq.bean.User;
+import com.hellochen.cjk_qq.user.User;
 
 import java.util.ArrayList;
 import java.util.List;

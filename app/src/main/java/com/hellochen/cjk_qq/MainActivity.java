@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.hellochen.cjk_qq.exam.examActivity;
 import com.hellochen.cjk_qq.other.TipHelper;
+import com.hellochen.cjk_qq.user.QueryUser;
 import com.hellochen.cjk_qq.wechat.SmartRoot;
 
 
@@ -81,8 +82,8 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.allUser:
                 //跳转查询界面
-             /*   Intent dialIntent1 = new Intent(MainActivity.this, QueryUser.class);
-                startActivity(dialIntent1);*/
+                Intent dialIntent1 = new Intent(MainActivity.this, QueryUser.class);
+                startActivity(dialIntent1);
                 TipHelper.Vibrate(this, new long[]{80,10}, false);
                 return true;
             case R.id.about:

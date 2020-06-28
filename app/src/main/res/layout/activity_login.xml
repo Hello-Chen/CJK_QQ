@@ -27,24 +27,46 @@
             android:layout_width="240dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
-            android:hint="QQ号/手机号/邮箱"
-            android:textAlignment="center"
+            android:layout_marginBottom="10dp"
             android:background="@drawable/edittext_style"
+            android:hint="QQ号/手机号/邮箱"
             android:maxLines="1"
             android:padding="10dp"
-            android:layout_marginBottom="10dp" />
+            android:textAlignment="center" />
 
         <EditText
             android:id="@+id/et_login_password"
             android:layout_width="240dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
-            android:textAlignment="center"
             android:layout_marginBottom="20dp"
-            android:maxLines="1"
             android:background="@drawable/edittext_style"
+            android:hint="输入密码"
+            android:maxLines="1"
             android:padding="10dp"
-            android:hint="输入密码" />
+            android:textAlignment="center" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <EditText
+                android:id="@+id/et_auth"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="请输入验证码" />
+
+            <TextView
+                android:id="@+id/tv_auth"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ssss"
+                android:textSize="30sp"/>
+        </LinearLayout>
 
         <ImageButton
             android:id="@+id/login"
@@ -58,7 +80,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:paddingTop="150dp">
+        android:paddingTop="100dp">
 
         <TextView
             android:id="@+id/forgetPassword"
@@ -94,6 +116,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Designer by HelloChen"
-            android:textColor="#ff0000"/>
+            android:textColor="#ff0000" />
     </LinearLayout>
 </LinearLayout>

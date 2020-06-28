@@ -1,4 +1,4 @@
-package com.hellochen.cjk_qq.bean;
+package com.hellochen.cjk_qq.user;
 
 /**
  * 文件名: User
