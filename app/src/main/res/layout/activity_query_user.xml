@@ -16,24 +16,28 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="用户"
+            android:textSize="20sp"
             android:gravity="center"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="昵称"
+            android:textSize="20sp"
             android:gravity="center"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="性别"
+            android:textSize="20sp"
             android:gravity="center"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="年龄"
+            android:textSize="20sp"
             android:gravity="center"/>
     </LinearLayout>
     <ListView

@@ -5,6 +5,7 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -62,6 +63,9 @@ public class Login extends Activity {
 
         //验证码
         tv_auth.setText(createRandomCharData(4) + "");
+        tv_auth.getPaint().setFlags(Paint.STRIKE_THRU_TEXT_FLAG);
+      // tv_auth.getPaint().setFlags(Paint.FAKE_BOLD_TEXT_FLAG);
+       // tv_auth.getPaint().setFlags(Paint.UNDERLINE_TEXT_FLAG);
         //监听事件函数
         setListeners();
     }

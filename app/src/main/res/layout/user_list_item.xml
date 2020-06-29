@@ -10,25 +10,28 @@
         <TextView
             android:id="@+id/tv_item_username"
             android:layout_width="0dp"
+            android:textSize="20sp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"/>
         <TextView
             android:id="@+id/tv_item_name"
             android:layout_width="0dp"
+            android:textSize="20sp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"/>
         <TextView
             android:id="@+id/tv_item_sex"
             android:layout_width="0dp"
+            android:textSize="20sp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="ss"
             android:gravity="center"/>
         <TextView
             android:id="@+id/tv_item_age"
             android:layout_width="0dp"
+            android:textSize="20sp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"/>

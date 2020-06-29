@@ -61,10 +61,11 @@
 
             <TextView
                 android:id="@+id/tv_auth"
-                android:layout_marginLeft="20dp"
-                android:layout_width="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:text="ssss"
+                android:textStyle="italic"
                 android:textSize="30sp"/>
         </LinearLayout>
 
@@ -80,7 +81,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:paddingTop="100dp">
+        android:layout_marginTop="100dp">
 
         <TextView
             android:id="@+id/forgetPassword"

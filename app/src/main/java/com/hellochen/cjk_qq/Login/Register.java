@@ -70,8 +70,8 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
         age = et_register_age.getText().toString();
         password = et_register_password.getText().toString();
 
-        if (TextUtils.isEmpty(username)){
-            Toast.makeText(Register.this, "用户名不能为空", Toast.LENGTH_SHORT).show();
+        if (TextUtils.isEmpty(username)||TextUtils.isEmpty(password)){
+            Toast.makeText(Register.this, "用户名或密码不能为空", Toast.LENGTH_SHORT).show();
             return;
         }
         User user = accountDao.getAccountuser(username);
@@ -79,6 +79,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
         if (user == null) {
             user = new User(username, name, sex, age, password);
             accountDao.addAdcount(user);
+            Toast.makeText(Register.this, "注册成功！", Toast.LENGTH_SHORT).show();
             finish();
         } else {
             Toast.makeText(Register.this, "用户以存在！", Toast.LENGTH_SHORT).show();

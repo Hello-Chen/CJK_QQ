@@ -7,6 +7,7 @@ import android.os.Message;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,6 +16,7 @@ import com.hellochen.cjk_qq.MainActivity;
 import com.hellochen.cjk_qq.R;
 import com.hellochen.cjk_qq.mode.AccountDao;
 import com.hellochen.cjk_qq.mode.UserDBHelper;
+import com.hellochen.cjk_qq.other.TipHelper;
 
 import java.util.List;
 
@@ -58,6 +60,8 @@ public class QueryUser extends AppCompatActivity {
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
                 User user = lists.get(position);
                 accountDao.deleteContactByHxId(user.getUsername());
+                TipHelper.Vibrate(QueryUser.this, new long[]{150,10}, false);
+                Toast.makeText(QueryUser.this, "删除成功！", Toast.LENGTH_SHORT).show();
                 Message msg = Message.obtain();
                 msg.what=1;
                 handler.sendMessage(msg);
