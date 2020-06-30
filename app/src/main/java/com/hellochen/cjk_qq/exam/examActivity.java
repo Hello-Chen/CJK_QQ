@@ -11,6 +11,7 @@ import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.hellochen.cjk_qq.R;
 
@@ -23,6 +24,7 @@ public class examActivity extends AppCompatActivity implements View.OnClickListe
     private TextView textView;
     //给一个统计分数的变量
     private int count = 0;
+    private  boolean flag = true;
     //
     AlertDialog alertDialog;
     ProgressDialog progressDialog;
@@ -74,29 +76,38 @@ public class examActivity extends AppCompatActivity implements View.OnClickListe
 
     //提交的点击事件
     public void Putin(View view) {
-        //提示提交的对话框设置
-        alertDialog = new AlertDialog.Builder(this)
-                .setMessage("确定提交！")
-                .setNegativeButton("取消", null)
-                .setPositiveButton("确认", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        //提示性对话框
-                        //Dialog();
-                        if (a1.isChecked()) {
-                            count = count + 10;
-                        } else {
-                            count += 0;
+        if (flag )
+        {
+            //提示提交的对话框设置
+            alertDialog = new AlertDialog.Builder(this)
+                    .setMessage("确定提交！")
+                    .setNegativeButton("取消", null)
+                    .setPositiveButton("确认", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            //提示性对话框
+                            //Dialog();
+                            if (a1.isChecked()) {
+                                count = count + 10;
+                            } else {
+                                count += 0;
+                            }
+                            if (b2.isChecked()) {
+                                count = count + 10;
+                            } else {
+                                count += 0;
+                            }
+                            textView.setText(String.valueOf(count));
+                            dialog.dismiss();
                         }
-                        if (b2.isChecked()) {
-                            count = count + 10;
-                        } else {
-                            count += 0;
-                        }
-                        textView.setText(String.valueOf(count));
-                        dialog.dismiss();
-                    }
-                }).create();
-        alertDialog.show();
+                    }).create();
+            alertDialog.show();
+            flag = false;
+        }
+        else {
+
+             Toast.makeText(examActivity.this, "你已经提交过一次了", Toast.LENGTH_SHORT).show();
+        }
+
     }
 }

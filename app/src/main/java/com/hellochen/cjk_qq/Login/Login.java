@@ -144,7 +144,7 @@ public class Login extends Activity {
             return;
         }
         if (TextUtils.isEmpty(authCode) || !authCode.equals(tv_auth.getText().toString())) {
-            Toast.makeText(Login.this, "验证码错误或为空", Toast.LENGTH_SHORT).show();
+            Toast.makeText(Login.this, "校验码错误", Toast.LENGTH_SHORT).show();
             return;
         }
         if (TextUtils.isEmpty(username) || TextUtils.isEmpty(password)) {

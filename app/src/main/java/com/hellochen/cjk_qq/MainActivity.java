@@ -1,36 +1,86 @@
 package com.hellochen.cjk_qq;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.hellochen.cjk_qq.exam.examActivity;
+import com.hellochen.cjk_qq.mode.AccountDao;
+import com.hellochen.cjk_qq.mode.AccountTable;
+import com.hellochen.cjk_qq.mode.UserDBHelper;
 import com.hellochen.cjk_qq.other.TipHelper;
 import com.hellochen.cjk_qq.user.QueryUser;
+import com.hellochen.cjk_qq.user.User;
 import com.hellochen.cjk_qq.wechat.SmartRoot;
 
 
 public class MainActivity extends AppCompatActivity {
+    private ImageButton head;
+    private TextView welcome;
+    private UserDBHelper userDBHelper;
+    private AccountDao accountDao;
+    private String username,name,sex,age;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        userDBHelper = new UserDBHelper(this);
+        accountDao = new AccountDao(this);
+
+        //点击头像弹出信息
+        head = findViewById(R.id.head);
+        welcome = findViewById(R.id.welcome);
+
+        Intent intent = getIntent();
+
+        username=intent.getStringExtra(AccountTable.COL_USERNAME);
+        name=intent.getStringExtra(AccountTable.COL_NAME);
+        sex=intent.getStringExtra(AccountTable.COL_SEX);
+        age=intent.getStringExtra(AccountTable.COL_AGE);
+        Log.d("TAG", name);
+
+        welcome.setText("欢迎用户"+username);
+
+
+        head.setOnClickListener(V->{
+            AlertDialog alertDialog;
+            alertDialog = new androidx.appcompat.app.AlertDialog.Builder(this)
+                    .setTitle("用户信息")
+                    .setMessage("用户: "+username+"\r\n"+"名字: "+name+"\r\n"+"性别: "+sex+"\r\n"+"年龄: "+age+"\r\n" )
+                    .setPositiveButton("确认", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            //提示性对话框
+
+                            dialog.dismiss();
+                        }
+                    }).create();
+            alertDialog.show();
+        });
+
+
 
         //跳转百度
         findViewById(R.id.baidu).setOnClickListener(V -> {
-            Intent intent = new Intent();
-            intent.setAction("android.intent.action.VIEW");
+            Intent intent1 = new Intent();
+            intent1.setAction("android.intent.action.VIEW");
             Uri content_url = Uri.parse("https://www.baidu.com/");//此处填链接
-            intent.setData(content_url);
-            startActivity(intent);
+            intent1.setData(content_url);
+            startActivity(intent1);
             TipHelper.Vibrate(this, new long[]{80,10}, false);
         });
 
