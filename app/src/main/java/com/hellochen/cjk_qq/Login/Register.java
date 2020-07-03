@@ -12,8 +12,8 @@ import android.widget.Toast;
 
 import com.hellochen.cjk_qq.R;
 import com.hellochen.cjk_qq.user.User;
-import com.hellochen.cjk_qq.mode.AccountDao;
-import com.hellochen.cjk_qq.mode.UserDBHelper;
+import com.hellochen.cjk_qq.DatabaseQuery.AccountDao;
+import com.hellochen.cjk_qq.DatabaseQuery.UserDBHelper;
 
 public class Register extends AppCompatActivity implements View.OnClickListener {
     private UserDBHelper userDBHelper;

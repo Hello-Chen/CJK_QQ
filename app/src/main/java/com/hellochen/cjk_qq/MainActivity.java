@@ -17,12 +17,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.hellochen.cjk_qq.exam.examActivity;
-import com.hellochen.cjk_qq.mode.AccountDao;
-import com.hellochen.cjk_qq.mode.AccountTable;
-import com.hellochen.cjk_qq.mode.UserDBHelper;
+import com.hellochen.cjk_qq.DatabaseQuery.AccountDao;
+import com.hellochen.cjk_qq.DatabaseQuery.AccountTable;
+import com.hellochen.cjk_qq.DatabaseQuery.UserDBHelper;
 import com.hellochen.cjk_qq.other.TipHelper;
 import com.hellochen.cjk_qq.user.QueryUser;
-import com.hellochen.cjk_qq.user.User;
 import com.hellochen.cjk_qq.wechat.SmartRoot;
 
 

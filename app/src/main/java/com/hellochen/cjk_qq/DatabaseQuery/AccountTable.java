@@ -1,4 +1,4 @@
-package com.hellochen.cjk_qq.mode;
+package com.hellochen.cjk_qq.DatabaseQuery;
 
 public class AccountTable {
     public static final String TAB_NAME="account";

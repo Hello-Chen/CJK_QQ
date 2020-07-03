@@ -1,4 +1,4 @@
-package com.hellochen.cjk_qq.mode;
+package com.hellochen.cjk_qq.DatabaseQuery;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

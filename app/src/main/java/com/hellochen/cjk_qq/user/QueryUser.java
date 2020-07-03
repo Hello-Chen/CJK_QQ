@@ -1,6 +1,5 @@
 package com.hellochen.cjk_qq.user;
 
-import android.app.AppComponentFactory;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -12,10 +11,9 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.hellochen.cjk_qq.MainActivity;
 import com.hellochen.cjk_qq.R;
-import com.hellochen.cjk_qq.mode.AccountDao;
-import com.hellochen.cjk_qq.mode.UserDBHelper;
+import com.hellochen.cjk_qq.DatabaseQuery.AccountDao;
+import com.hellochen.cjk_qq.DatabaseQuery.UserDBHelper;
 import com.hellochen.cjk_qq.other.TipHelper;
 
 import java.util.List;

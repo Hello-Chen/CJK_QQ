@@ -1,6 +1,5 @@
 package com.hellochen.cjk_qq.Login;
 
-import android.accounts.Account;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -17,10 +16,10 @@ import android.widget.Toast;
 import com.hellochen.cjk_qq.MainActivity;
 import com.hellochen.cjk_qq.MyActivity;
 import com.hellochen.cjk_qq.R;
-import com.hellochen.cjk_qq.mode.AccountTable;
+import com.hellochen.cjk_qq.DatabaseQuery.AccountTable;
 import com.hellochen.cjk_qq.user.User;
-import com.hellochen.cjk_qq.mode.AccountDao;
-import com.hellochen.cjk_qq.mode.UserDBHelper;
+import com.hellochen.cjk_qq.DatabaseQuery.AccountDao;
+import com.hellochen.cjk_qq.DatabaseQuery.UserDBHelper;
 
 import java.util.Random;
 
@@ -142,7 +141,7 @@ public class Login extends Activity {
         if (user == null) {
             Toast.makeText(Login.this, "此用户未注册", Toast.LENGTH_SHORT).show();
             return;
-        }
+        } 
         if (TextUtils.isEmpty(authCode) || !authCode.equals(tv_auth.getText().toString())) {
             Toast.makeText(Login.this, "校验码错误", Toast.LENGTH_SHORT).show();
             return;
